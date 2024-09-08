@@ -32,6 +32,7 @@ import paintcv from "./paintcv.png";
 import doubtless from "./doubtless.png";
 import simonsay from "./simonsay.png";
 import coilgun from "./coilgun.jpg";
+import trade from "./trade.png"
 
 import selfie from "./selfie.jpg";
 
@@ -68,4 +69,5 @@ export {
   coilgun,
   simonsay,
   selfie,
+  trade,
 };

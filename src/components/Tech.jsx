@@ -15,9 +15,9 @@ const Tech = () => {
         ))}
       </div>
       <motion.div 
-        className="flex justify-center text-center mt-20 text-[20px]"
+        className="flex justify-center text-center mt-20"
         variants={fadeIn("right", "spring", 0.5 * 1, 0.75)}>
-        I know more than these! Check this &nbsp; <a className="underline" href="https://github.com/IsMoNgai">Link</a> &nbsp; for more!
+        <span className="text-[20px] sm:text=[9px]">I know more than these! <br/> Check this&nbsp; <a className="underline" href="https://github.com/IsMoNgai">Link</a> &nbsp;for more!</span>
       </motion.div>
     </>
   )

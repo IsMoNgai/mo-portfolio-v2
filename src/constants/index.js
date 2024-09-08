@@ -21,6 +21,7 @@ import {
     doubtless,
     coilgun,
     simonsay,
+    trade,
   } from "../assets";
   
   export const navLinks = [
@@ -151,27 +152,6 @@ import {
       source_code_link: "https://ismongai.github.io/self-driving-car/self_driving_car_simulation/world/",
     },
     {
-      name: "Discord Bot",
-      description:
-        "A Discord bot designed to assist the Minecraft server guild. It extracts, processes, and manages website data with finesse, a feat achieved through Beautiful Soup for scraping and Pandas for manipulation. A relatively substantial project I have made.",
-      tags: [
-        {
-          name: "python",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "pandas",
-          color: "green-text-gradient",
-        },
-        {
-          name: "beautifulsoup",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: dcbot,
-      source_code_link: "https://github.com/IsMoNgai/Discord-bot",
-    },
-    {
       name: "Open CV Painter",
       description:
         "Developed an interactive painter using OpenCV, allowing users to draw smoothly with their fingers. The project integrates advanced OpenCV modules for hand recognition, face mesh, and face detection, enhancing the user experience with real-time interaction and responsiveness.",
@@ -191,6 +171,48 @@ import {
       ],
       image: paintcv,
       source_code_link: "https://github.com/IsMoNgai/Open-CV/tree/main",
+    },
+    {
+      name: "Quanta",
+      description:
+        "A custom chart UI built using Lightweight Charts. The chart data is provided by the Interactive Brokers API (IBAPI), allowing for real-time market analysis. The scripts also include calculations for the slope of moving averages, enhancing technical analysis and strategy development on the TradingView platform. I will integrate a trade bot with it in the future.",
+      tags: [
+        {
+          name: "python",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "pandas",
+          color: "green-text-gradient",
+        },
+        {
+          name: "ibapi",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: trade,
+      source_code_link: "https://github.com/IsMoNgai/quanta",
+    },
+    {
+      name: "Discord Bot",
+      description:
+        "A Discord bot designed to assist the Minecraft server guild. It extracts, processes, and manages website data with finesse, a feat achieved through Beautiful Soup for scraping and Pandas for manipulation. A relatively substantial project I have made.",
+      tags: [
+        {
+          name: "python",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "pandas",
+          color: "green-text-gradient",
+        },
+        {
+          name: "beautifulsoup",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: dcbot,
+      source_code_link: "https://github.com/IsMoNgai/Discord-bot",
     },
     {
       name: "Doubtless-forum",
