@@ -1,11 +1,10 @@
-import React from 'react';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 
 import { styles } from '../style';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
-import { ParticlesContainer, CarSimulation } from './canvas';
+import { selfie } from '../assets';
 
 const ServiceCard = () => {
   return (
@@ -44,7 +43,7 @@ const About = () => {
         <ServiceCard />
         <motion.div variants={fadeIn("left", "spring", 0.5 * 1, 0.75)} className="w-[80%] md:w-[40%] h-auto mb-5 md:mb-0">
           <img
-            src="../../public/selfie.jpg"
+            src= {selfie}
             alt="web-development"
             className='rounded-lg'
           />          

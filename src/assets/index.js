@@ -33,6 +33,8 @@ import doubtless from "./doubtless.png";
 import simonsay from "./simonsay.png";
 import coilgun from "./coilgun.jpg";
 
+import selfie from "./selfie.jpg";
+
 export {
   logo,
   github,
@@ -65,4 +67,5 @@ export {
   doubtless,
   coilgun,
   simonsay,
+  selfie,
 };

@@ -1,8 +1,8 @@
-import {Tilt} from 'react-tilt'
-import {motion} from 'framer-motion';
+import { Tilt } from 'react-tilt';
+import { motion } from 'framer-motion';
 
-import {styles} from '../style';
-import {github} from '../assets';
+import { styles } from '../style';
+import { github } from '../assets';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
@@ -39,26 +39,25 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           </div>
         </div>
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-white font-bold text-[24px] sm:text-[20px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-[14px] sm:text-[12px]'>{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-                #{tag.name}
+            <p key={tag.name} className={`text-[14px] sm:text-[12px] ${tag.color}`}>
+              #{tag.name}
             </p>
           ))}
-
         </div>
       </Tilt>
     </motion.div>
-  )
-}
+  );
+};
 
 const Works = () => {
   return (
-    <> 
+    <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>My projects</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
@@ -74,7 +73,7 @@ const Works = () => {
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
 export default SectionWrapper(Works, "");

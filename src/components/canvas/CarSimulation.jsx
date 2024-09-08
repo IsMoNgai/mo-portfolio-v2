@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const CarSimulation = () => {
   useEffect(() => {
@@ -24,7 +24,6 @@ const CarSimulation = () => {
         'world/js/primitives/polygon.js',
         'world/js/primitives/envelope.js',
         'world/saves/moName.world',
-        'world/miniMap.js',
         'world/visualizer.js',
         'world/network.js',
         'world/sensor.js',
@@ -37,27 +36,34 @@ const CarSimulation = () => {
       // Check if scripts have been loaded already
       if (!localStorage.getItem('scriptsLoaded')) {
         localStorage.setItem('scriptsLoaded', 'true');
+        console.log("Scripts loaded and set flag.");
 
         for (const src of scripts) {
           const script = document.createElement('script');
           script.src = src;
           script.async = true;
           document.body.appendChild(script);
-          
+
           // Wait until the script is loaded
           await new Promise((resolve, reject) => {
             script.onload = resolve;
-            script.onerror = reject; // Handle error
+            script.onerror = reject;
           });
         }
+      } else {
+        console.log("Scripts already loaded, skipping.");
       }
     };
 
     loadScripts();
 
-    // Cleanup function to reset the flag (optional)
+    localStorage.removeItem('scriptsLoaded');
+
+    // Cleanup function
     return () => {
+      console.log("Cleanup function executed");
       localStorage.removeItem('scriptsLoaded');
+      console.log("LocalStorage after removal:", localStorage);
     };
   }, []);
 
