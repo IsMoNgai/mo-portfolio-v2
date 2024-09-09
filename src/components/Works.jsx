@@ -1,5 +1,6 @@
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
 
 import { styles } from '../style';
 import { github } from '../assets';
@@ -8,11 +9,21 @@ import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+  const [isInView, setIsInView] = useState(false);
+  const ref = useRef(null);
+
+  const handleViewportEnter = () => {
+    setIsInView(true);
+  };
+
   return (
-    <motion.div 
+    <motion.div
+      ref={ref}
       initial="hidden"
-      animate="show"
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+      animate={isInView ? "show" : "hidden"}
+      onViewportEnter={handleViewportEnter}
+      variants={fadeIn("up", "spring", 0, 0.75)}
+    >
       <Tilt
         options={{
           max: 45,
@@ -59,12 +70,21 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 };
 
 const Works = () => {
+  const [isInView, setIsInView] = useState(false);
+  const ref = useRef(null);
+
+  const handleViewportEnter = () => {
+    setIsInView(true);
+  };
+
   return (
     <>
       <motion.div 
+        ref={ref}
         initial="hidden"
-        animate="show"
-        variants={textVariant(0.5)}
+        animate={isInView ? "show" : "hidden"}
+        onViewportEnter={handleViewportEnter}
+        variants={textVariant()}
       >
         <p className={styles.sectionSubText}>My projects</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>

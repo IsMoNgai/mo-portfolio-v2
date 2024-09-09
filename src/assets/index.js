@@ -32,7 +32,12 @@ import paintcv from "./paintcv.png";
 import doubtless from "./doubtless.png";
 import simonsay from "./simonsay.png";
 import coilgun from "./coilgun.jpg";
-import trade from "./trade.png"
+import trade from "./trade.png";
+
+import email from "./email.png";
+import linkedin from "./linkedin.png";
+import telephone from "./telephone.png";
+import youtube from "./youtube.png";
 
 import selfie from "./selfie.jpg";
 
@@ -70,4 +75,8 @@ export {
   simonsay,
   selfie,
   trade,
+  telephone,
+  linkedin,
+  email,
+  youtube,
 };
